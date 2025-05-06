@@ -203,6 +203,7 @@ CREATE TABLE User (
 o Install JDK 17 or .NET SDK 7.0.
 o Install MySQL or SQL Server.
 o Use an application server (Tomcat for Java, Kestrel for .NET).
+
 2. Deployment Steps:
 o Clone the repository.
 o Configure the database connection string in application.properties (Java) or 
