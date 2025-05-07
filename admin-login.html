@@ -71,9 +71,9 @@
     const username = document.getElementById('adminUsername').value;
     const password = document.getElementById('adminPassword').value;
 
-    if (username === "admin" && password === "adminPassword") {
+    if (username === "admin" && password === "password") {
       alert("Admin login successful! Redirecting to admin dashboard.");
-      window.location.href = "/admin-dashboard"; // Redirect to actual admin dashboard
+      window.location.href = "/adminhome.html"; // Redirect to actual admin dashboard
     } else {
       alert("Invalid admin credentials.");
     }
