@@ -12,6 +12,17 @@
       padding: 0;
     }
 
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scrollbar-width: none; /* For Firefox */
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     .signup-container {
       min-height: 100vh;
       display: flex;
@@ -105,7 +116,7 @@
       <!-- Front: Sign Up Form -->
       <div class="flip-card-front signup-card">
         <h2 class="text-center mb-4">Sign Up</h2>
-        <form>
+        <form id="signupForm">
           <div class="mb-3">
             <label for="username" class="form-label">Username</label>
             <input type="text" class="form-control" id="username" placeholder="Enter username" required>
@@ -118,7 +129,7 @@
             <label for="password" class="form-label">Password</label>
             <input type="password" class="form-control" id="password" placeholder="Enter password" required>
           </div>
-          <button type="button" class="btn btn-primary w-100" >Create Account</button>
+          <button type="submit" class="btn btn-primary w-100">Create Account</button>
         </form>
         <div class="form-footer text-center mt-3">
           Already have an account? <a href="javascript:void(0)" onclick="flipToLogin()">Login</a>
@@ -159,6 +170,29 @@
   function flipToSignUp() {
     document.getElementById('signupFlipCard').classList.remove('flipped');
   }
+
+  // Handle Sign Up
+  document.getElementById('signupForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent default form submission
+    // Simulate successful signup
+    alert('Account created successfully!');
+    window.location.href = 'home.html'; // Redirect to home.html
+  });
+
+  // Handle Login
+  document.getElementById('loginForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent default form submission
+    // Simulate successful login
+    const username = document.getElementById('loginUsername').value;
+    const password = document.getElementById('loginPassword').value;
+
+    if (username && password) {
+      alert('Login successful!');
+      window.location.href = 'home.html'; // Redirect to home.html
+    } else {
+      alert('Invalid username or password.');
+    }
+  });
 </script>
 
 </body>

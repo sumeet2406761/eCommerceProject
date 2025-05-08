@@ -9,6 +9,25 @@
     body {
       background-color: #f8f9fa;
       padding-top: 55px;
+      overflow: auto;
+      scrollbar-width: none;
+    }
+
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-width: none; /* For Firefox */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+    body::-webkit-scrollbar{
+      display: none;
+      scrollbar-width: none;
+      scrollbar-color: transparent transparent;
     }
 
     .navbar {
@@ -211,14 +230,18 @@
   background-size: calc(1.732 * var(--s)) var(--s);
 }
 
-
+  .dashicon{
+    margin-top: 8px;
+    width: 25px;
+    height: 25px;
+  }
   </style>
 </head>
 <body class="container1">
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">BookBazaar Admin</a>
+      <a class="navbar-brand" href="/adminhome.html">BookMart </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
         aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -229,9 +252,9 @@
           <li class="nav-item"><a class="nav-link" href="/adminhome.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="/allorders.html">Orders</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Stock</a></li>
-          <li class="nav-item"><a class="nav-link" href="/genre.html">Genre</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Genre</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Books</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Top Selling Items</a></li>
+          <li class="nav-item"><a class="nav-link" href="/topselling.html">Top Selling Items</a></li>
         </ul>
 
         <ul class="navbar-nav ms-auto">
@@ -251,14 +274,16 @@
       <a href="/allorders.html">Orders</a>
       <a href="/adminstock.html">Stock</a>
       <a href="/genre.html">Genre</a>
-      <a href="#">Books</a>
-      <a href="#">Top Selling Items</a>
+      <a href="/book.html">Books</a>
+      <a href="/topselling.html">Top Selling Items</a>
     </div>
 
     <!-- Main Content -->
     <div class="content w-100">
       <div>
-        <h2 class=" d-flex flex-row gap-5 ">Dashboard Overview</h2>
+        <h2 class=" d-flex flex-row gap-2 p-2 rounded" style="background-color: #f0f0f0; color: #333;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="dashicon bi bi-grid-1x2-fill" viewBox="0 0 16 16">
+          <path d="M0 1a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1zm9 0a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1zm0 9a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1z"/>
+        </svg>Dashboard Overview</h2>
         <div class="loader ">
           <div class="truckWrapper">
             <div class="truckBody">
