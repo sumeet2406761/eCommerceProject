@@ -65,6 +65,17 @@
       }
     }
 
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-width: none; /* For Firefox */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
     /* From Uiverse.io by csemszepp */
     .container1 {
       width: 100%;
@@ -140,7 +151,7 @@
 
     <!-- Main Content -->
     <div class="content">
-      <h2 class="mb-4">Stocks</h2>
+      <h2 class="mb-4 rounded p-2" style="background-color: #f0f0f0; color: #333;">Stocks</h2>
       <a class="btn btn-primary mb-3 w-25" href="/adminhome.html">Back</a>
 
       <!-- Search Form -->

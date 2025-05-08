@@ -52,6 +52,17 @@
       margin-bottom: 8px;
     }
 
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-width: none; /* For Firefox */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
   
 
     @media (max-width: 991.98px) {
@@ -140,7 +151,7 @@
 
     <!-- Main Content -->
     <div class="content">
-      <h2 class="mb-4">Orders</h2>
+      <h2 class="mb-4 rounded p-2" style="background-color: #f0f0f0; color: #333;">Orders</h2>
 
       <!-- Orders Table -->
       <!-- Responsive Table Wrapper -->
