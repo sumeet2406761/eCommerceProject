@@ -85,6 +85,10 @@
       }
     }
 
+    .backbtn{
+      width: 100px;
+    }
+
 /* From Uiverse.io by csemszepp */ 
 .container1 {
   width: 100%;
@@ -156,7 +160,6 @@
     <div class="content">
       <div >
         <h2 class="mb-4">Update Genre</h2>
-        <a href="/genre.html" class="btn btn-primary mb-3 w-25">Back</a>
         <form action="/genre/updategenre" method="post">
           <input type="hidden" name="Id" value="<!-- Add Genre Id here -->" />
           <div class="mb-3">
@@ -165,7 +168,8 @@
             <span class="text-danger"> <!-- Validation message here --> </span>
           </div>
           <div class="mb-3">
-            <button type="submit" class="btn btn-info mb-3">Update</button>
+            <button type="submit" class="backbtn btn btn-primary mt-2">Update</button>
+            <a class="backbtn mt-2 btn btn-primary" href="/genre.html">Back</a>
           </div>
         </form>
     </div>
