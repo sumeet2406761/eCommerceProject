@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Details - BookMart</title>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .imageofbook {
+    height: 450px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .carousel-inner {
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        background-color: rgba(0, 0, 0, 0.6);
+        border-radius: 50%;
+        padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <img src="spell-book (1).png" style="width: 35px; margin-right: 10px;" alt="">
+        <a class="navbar-brand" href="#" style="font-size: 30px;"><b>BookMart</b></a>
+            
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarContent" aria-controls="navbarContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="/home.html">Home</a>
+                </li>
+                <li>
+                    <a class="nav-link active" href="/getusercart.html">Cart</a>
+                </li>
+                <li>
+                    <a class="nav-link active" href="/userord.html">Orders</a>
+                </li>
+            </ul>
+            <div class="d-flex">
+                <a href="/userProfile.html" class="btn btn-outline-light"><i class="fa-solid fa-user"></i> Profile</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-4">
+  <!-- <a href="index.html" class="btn btn-secondary mb-3">← Back</a> -->
+
+  <div class="row">
+    <div class="col-md-6">
+      <!-- Carousel -->
+      <div id="bookCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="images/great gatsby.avif" class="d-block w-100 imageofbook" alt="Book Image 1">
+            </div>
+            <div class="carousel-item">
+              <img src="images/the great gatsby 2.avif" class="d-block w-100 imageofbook" alt="Book Image 2">
+            </div>
+            <div class="carousel-item">
+              <img src="images/the great gatsby 3.jpg" class="d-block w-100 imageofbook" alt="Book Image 3">
+            </div>
+        </div>
+          
+        <button class="carousel-control-prev" type="button" data-bs-target="#bookCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#bookCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <h2>The great gatsby</h2>
+      <p><strong>Author:</strong> F. Scott Fitzgerald</p>
+      <p><strong>Genre:</strong> Fiction</p>
+      <p><strong>Price:</strong> ₹250</p>
+      <p><strong>Description:</strong> The Great Gatsby is a 1925 novel by American writer F. Scott Fitzgerald. The novel is set in the Jazz Age on Long Island, near New York City, and depicts first-person narrator Nick Carraway's interactions with mysterious millionaire Jay Gatsby and Gatsby's obsession to reunite with his former lover, Daisy Buchanan. The novel presents a critical portrait of the American dream through its portrayal of the 1920s New York elite, exploring themes of wealth, class, love, and idealism.</p>
+      <button class="btn btn-primary add-to-cart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<footer class="bg-dark text-white py-4 mt-5">
+    <div class="container text-center">
+        <p class="mb-1">&copy; 2025 BookMart. All Rights Reserved.</p>
+        <p class="mb-0">Contact: info@bookmart.com | Phone: +91 0000000000</p>
+    </div>
+</footer>
+
+<script>
+    $(".add-to-cart").click(function() {
+        alert(" Book added to cart ");
+    });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
