@@ -96,7 +96,13 @@
 
       .content {
         margin-left: 0;
+        padding: 15px;
+        width: 100%;
       }
+    }
+    
+    .table-responsive {
+      max-width: 100%;
     }
 
     .dashicon{
@@ -105,32 +111,32 @@
     }
 
     .container1 {
-  width: 100%;
-  height: 100%;
-  --s: 82px;
-  --c1: #b2b2b2;
-  --c2: #ffffff;
-  --c3: #d9d9d9;
+      width: 100%;
+      height: 100%;
+      --s: 82px;
+      --c1: #b2b2b2;
+      --c2: #ffffff;
+      --c3: #d9d9d9;
 
-  --_g: var(--c3) 0 120deg, #0000 0;
-  background: conic-gradient(from -60deg at 50% calc(100% / 3), var(--_g)),
-    conic-gradient(from 120deg at 50% calc(200% / 3), var(--_g)),
-    conic-gradient(
-      from 60deg at calc(200% / 3),
-      var(--c3) 60deg,
-      var(--c2) 0 120deg,
-      #0000 0
-    ),
-    conic-gradient(from 180deg at calc(100% / 3), var(--c1) 60deg, var(--_g)),
-    linear-gradient(
-      90deg,
-      var(--c1) calc(100% / 6),
-      var(--c2) 0 50%,
-      var(--c1) 0 calc(500% / 6),
-      var(--c2) 0
-    );
-  background-size: calc(1.732 * var(--s)) var(--s);
-}
+      --_g: var(--c3) 0 120deg, #0000 0;
+      background: conic-gradient(from -60deg at 50% calc(100% / 3), var(--_g)),
+        conic-gradient(from 120deg at 50% calc(200% / 3), var(--_g)),
+        conic-gradient(
+          from 60deg at calc(200% / 3),
+          var(--c3) 60deg,
+          var(--c2) 0 120deg,
+          #0000 0
+        ),
+        conic-gradient(from 180deg at calc(100% / 3), var(--c1) 60deg, var(--_g)),
+        linear-gradient(
+          90deg,
+          var(--c1) calc(100% / 6),
+          var(--c2) 0 50%,
+          var(--c1) 0 calc(500% / 6),
+          var(--c2) 0
+        );
+      background-size: calc(1.732 * var(--s)) var(--s);
+    }
   </style>
 </head>
 <body class="container1">
@@ -178,7 +184,7 @@
     </div>
 
     <!-- Main Content -->
-    <div class="content">
+    <div class="content w-100">
       <h2 class="mb-4 rounded p-2" style="background-color: #f0f0f0; color: #333;">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="dashicon bi bi-box-seam-fill mb-1" viewBox="0 0 16 16">
           <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.01-.003.268-.108a.75.75 0 0 1 .558 0l.269.108.01.003zM10.404 2 4.25 4.461 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339L8 5.961 5.596 5l6.154-2.461z"/>
@@ -187,7 +193,7 @@
       </h2>
 
       <!-- Orders Table -->
-      <div class="table-responsive">
+      <div class="table-responsive overflow-auto">
         <table class="table table-striped table-bordered shadow-sm">
           <thead>
             <tr>
@@ -196,7 +202,7 @@
               <th>Email</th>
               <th>Mobile No</th>
               <th>Address</th>
-              <th>Payment Status</th>
+              <th style="white-space: nowrap">Payment Status</th>
               <th style="white-space: nowrap">Order Status</th>
               <th>Actions</th>
             </tr>
@@ -211,9 +217,9 @@
               <td>Credit Card | Paid</td>
               <td>Shipped</td>
               <td>
-                <div class="d-flex flex-column">
-                  <button class="btn btn-sm btn-primary mb-1" data-bs-toggle="modal" data-bs-target="#modal-1">Order Detail</button>
-                  <a href="/adminoperations.html" class="btn btn-sm btn-info mb-1">Change Status</a>
+                <div class="d-flex flex-column gap-1">
+                  <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#modal-1">Order Detail</button>
+                  <a href="/adminoperations.html" class="btn btn-sm btn-info">Change Status</a>
                 </div>
 
                 <!-- Modal -->
