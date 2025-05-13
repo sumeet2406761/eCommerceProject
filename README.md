@@ -109,4 +109,4 @@ Relational schema supporting all core modules. Includes foreign keys and ENUMs f
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/e-commerce-platform.git
+   git clone https://github.com/sumeet2406761/e-commerce-platform.git
