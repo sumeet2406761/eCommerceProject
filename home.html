@@ -2195,17 +2195,11 @@ html {
 </footer>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const buttons = document.querySelectorAll(".add-to-cart");
-
-        buttons.forEach(button => {
-            button.addEventListener("click", function (event) {
-                event.stopPropagation(); // Prevents the event from bubbling up
-                event.preventDefault();  // Prevents the anchor tag's default behavior if needed
-
-                // Your add-to-cart logic here
-                alert("Added to cart!");
-            });
+    $(document).ready(function () {
+        $(".add-to-cart").click(function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+            alert("Added to cart!");
         });
     });
 </script>
